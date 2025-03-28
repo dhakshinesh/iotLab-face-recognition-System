@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Images</h1>
+        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+            <label for="username">Enter Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="files">Select Images:</label>
+            <input type="file" id="files" name="files" multiple required>  <!-- Multiple file support -->
+            
+            <button type="submit">Upload</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="btn">Go Back</a>
+    </div>
+</body>
+</html>
