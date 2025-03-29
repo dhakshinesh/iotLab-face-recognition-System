@@ -6,17 +6,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Upload Images</h1>
+        <h1>Upload Image</h1>
         <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
             <label for="username">Enter Username:</label>
             <input type="text" id="username" name="username" required>
-            
-            <label for="files">Select Images:</label>
-            <input type="file" id="files" name="files" multiple required>  <!-- Multiple file support -->
+            <label for="files">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="files">Select Image:</label>
+            <input type="file" name="file" id="file" accept=".jpg" required>
             
             <button type="submit">Upload</button>
         </form>
-        <a href="{{ url_for('index') }}" class="btn">Go Back</a>
     </div>
 </body>
 </html>
